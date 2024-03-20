@@ -735,7 +735,7 @@ static VALUE ov_http_client_build_url( VALUE url, VALUE query) {
     return url;
 }
 
-static int ov_http_client_add_header(VALUE name, VALUE value, struct curl_slist** headers) {
+static int* ov_http_client_add_header(VALUE name, VALUE value, struct curl_slist** headers) {
     VALUE header = Qnil;
 
     header = rb_sprintf("%"PRIsVALUE": %"PRIsVALUE"", name, value);
