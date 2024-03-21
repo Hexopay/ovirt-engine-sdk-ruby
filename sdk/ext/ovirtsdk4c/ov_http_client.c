@@ -495,12 +495,7 @@ static int ov_http_client_debug_function(CURL* handle, curl_infotype type, char*
     context.type = type;
     context.data = data;
     context.size = size;
-    if (ruby_thread_has_gvl_p()) {
-       ov_http_client_debug_task(&context);
-    }
-    else {
-       rb_thread_call_with_gvl(ov_http_client_debug_task, &context);
-    }
+    rb_thread_call_with_gvl(ov_http_client_debug_task, &context);
     return 0;
 }
 
