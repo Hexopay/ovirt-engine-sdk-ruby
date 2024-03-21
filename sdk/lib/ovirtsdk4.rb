@@ -27,7 +27,7 @@ require 'ovirtsdk4c'
 #
 # Own requirements.
 #
-require 'ovirtsdk4/version.rb'
+require_relative 'ovirtsdk4/version.rb'
 require 'ovirtsdk4/errors.rb'
 require 'ovirtsdk4/connection.rb'
 require 'ovirtsdk4/type.rb'
