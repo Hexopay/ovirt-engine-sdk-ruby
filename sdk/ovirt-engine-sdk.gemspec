@@ -40,7 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency('yard', '~> 0.9', '>= 0.9.12')
 
   # Run time dependencies:
-  spec.add_dependency('json')
+  spec.add_dependency('json', '~> 2.7')
 
   # Extensions:
   spec.extensions = [
